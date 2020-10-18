@@ -44,3 +44,24 @@ the report such as average age, sum of bill amount, average bill amount etc.,
 Login to VMWare –
 Prerequisites:
 Start Hadoop, history server, hive in mr mode, mysql service, hive metastore, hbase and phoenix
+
+Go to:
+Player -> Manage -> Virtual Machine Settings -> change the memory as 3072 MB or upto 6208 MB and
+cpu core to 2
+
+Extraction of Source code & data:
+Download into /home/hduser and Untar the data provided in creditcard_insurance.tar.gz
+cd ~
+tar xvzf creditcard_insurance.tar.gz
+
+DataSet:
+All extracted scripts, datasets and other files will be in the given below location.
+/home/hduser/creditcard_insurance
+Start the Following services:
+Hadoop:
+start-all.sh
+mr-jobhistory-daemon.sh start historyserver
+Login, start mysql service and exit:
+service mysqld start
+sudo mysql -u root -p
+password: root
